@@ -1,472 +1,527 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Muhammad Idrees — Lecturer of Mathematics and Software Developer from Pakistan." />
-  <title>Muhammad Idrees — Portfolio</title>
-  <style>
-    :root {
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --surface-2: #273549;
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-strong: #0ea5e9;
-      --border: #334155;
-      --radius: 12px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Muhammad Idrees — Lecturer of Mathematics and Software Developer from Pakistan."
+    />
+    <title>Muhammad Idrees — Portfolio</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --surface: #1e293b;
+        --surface-2: #273549;
+        --text: #e2e8f0;
+        --text-muted: #94a3b8;
+        --accent: #38bdf8;
+        --accent-strong: #0ea5e9;
+        --border: #334155;
+        --radius: 12px;
+      }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    html {
-      scroll-behavior: smooth;
-    }
+      html {
+        scroll-behavior: smooth;
+      }
 
-    body {
-      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
 
-    a:hover {
-      text-decoration: underline;
-    }
+      a:hover {
+        text-decoration: underline;
+      }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
 
-    /* ---------- Header / Nav ---------- */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-    }
+      /* ---------- Header / Nav ---------- */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 0.9rem 0;
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--text);
-    }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.1rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    /* ---------- Hero ---------- */
-    .hero {
-      padding: 5rem 0 4rem;
-      text-align: center;
-      background:
-        radial-gradient(ellipse at top, rgba(56, 189, 248, 0.12), transparent 60%);
-    }
-
-    .hero .greeting {
-      color: var(--accent);
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 6vw, 3.5rem);
-      margin: 0.5rem 0;
-      line-height: 1.2;
-    }
-
-    .hero .tagline {
-      color: var(--text-muted);
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      max-width: 620px;
-      margin: 0.75rem auto 2rem;
-    }
-
-    .hero .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.7rem 1.6rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: transform 0.15s ease, background 0.2s ease;
-    }
-
-    .btn:hover {
-      text-decoration: none;
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: var(--accent-strong);
-      color: #0b1120;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent);
-    }
-
-    .btn-outline {
-      border: 1px solid var(--accent);
-      color: var(--accent);
-    }
-
-    /* ---------- Sections ---------- */
-    section {
-      padding: 4rem 0;
-    }
-
-    section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    section h2::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    /* ---------- About ---------- */
-    .about p + p {
-      margin-top: 1rem;
-    }
-
-    .about p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-    }
-
-    .about strong {
-      color: var(--text);
-    }
-
-    /* ---------- Skills ---------- */
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .skill {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 0.5rem 1.2rem;
-      font-size: 0.95rem;
-      color: var(--text);
-      transition: border-color 0.2s ease, transform 0.15s ease;
-    }
-
-    .skill:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    /* ---------- Projects ---------- */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      transition: transform 0.15s ease, border-color 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
-    }
-
-    .card h3 {
-      font-size: 1.15rem;
-    }
-
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      flex: 1;
-    }
-
-    .card .link {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .card .coming-soon {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    /* ---------- Contact ---------- */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .contact-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.4rem;
-      text-align: center;
-    }
-
-    .contact-item .icon {
-      font-size: 1.6rem;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-item .label {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 0.25rem;
-    }
-
-    /* ---------- Footer ---------- */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 1.5rem 0;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    /* ---------- Mobile tweaks ---------- */
-    @media (max-width: 600px) {
       nav {
-        justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.9rem 0;
       }
 
+      .logo {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--text);
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.1rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      /* ---------- Hero ---------- */
       .hero {
-        padding: 3.5rem 0 3rem;
+        padding: 5rem 0 4rem;
+        text-align: center;
+        background: radial-gradient(
+          ellipse at top,
+          rgba(56, 189, 248, 0.12),
+          transparent 60%
+        );
       }
 
+      .hero .greeting {
+        color: var(--accent);
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 6vw, 3.5rem);
+        margin: 0.5rem 0;
+        line-height: 1.2;
+      }
+
+      .hero .tagline {
+        color: var(--text-muted);
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        max-width: 620px;
+        margin: 0.75rem auto 2rem;
+      }
+
+      .hero .buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.7rem 1.6rem;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition:
+          transform 0.15s ease,
+          background 0.2s ease;
+      }
+
+      .btn:hover {
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: var(--accent-strong);
+        color: #0b1120;
+      }
+
+      .btn-primary:hover {
+        background: var(--accent);
+      }
+
+      .btn-outline {
+        border: 1px solid var(--accent);
+        color: var(--accent);
+      }
+
+      /* ---------- Sections ---------- */
       section {
-        padding: 3rem 0;
+        padding: 4rem 0;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Muhammad <span>Idrees</span></div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
 
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="home">
+      section h2::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+
+      /* ---------- About ---------- */
+      .about p + p {
+        margin-top: 1rem;
+      }
+
+      .about p {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+      }
+
+      .about strong {
+        color: var(--text);
+      }
+
+      /* ---------- Skills ---------- */
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .skill {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.95rem;
+        color: var(--text);
+        transition:
+          border-color 0.2s ease,
+          transform 0.15s ease;
+      }
+
+      .skill:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      /* ---------- Projects ---------- */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        transition:
+          transform 0.15s ease,
+          border-color 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+      }
+
+      .card h3 {
+        font-size: 1.15rem;
+      }
+
+      .card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        flex: 1;
+      }
+
+      .card .link {
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .card .coming-soon {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        font-style: italic;
+      }
+
+      /* ---------- Contact ---------- */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .contact-item {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.4rem;
+        text-align: center;
+      }
+
+      .contact-item .icon {
+        font-size: 1.6rem;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-item .label {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 0.25rem;
+      }
+
+      /* ---------- Footer ---------- */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 1.5rem 0;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      /* ---------- Mobile tweaks ---------- */
+      @media (max-width: 600px) {
+        nav {
+          justify-content: center;
+        }
+
+        .hero {
+          padding: 3.5rem 0 3rem;
+        }
+
+        section {
+          padding: 3rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
       <div class="container">
-        <p class="greeting">Hello, I'm</p>
-        <h1>Muhammad Idrees</h1>
-        <p class="tagline">
-          Lecturer of Mathematics &amp; Software Developer — turning ideas into
-          fast, functional web apps with a mathematician's eye for detail.
-        </p>
-        <div class="buttons">
-          <a class="btn btn-primary" href="#projects">View My Work</a>
-          <a class="btn btn-outline" href="#contact">Get In Touch</a>
+        <nav>
+          <div class="logo">Muhammad <span>Idrees</span></div>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="home">
+        <div class="container">
+          <p class="greeting">Hello, I'm</p>
+          <h1>Muhammad Idrees</h1>
+          <p class="tagline">
+            Lecturer of Mathematics &amp; Software Developer — turning ideas
+            into fast, functional web apps with a mathematician's eye for
+            detail.
+          </p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#projects">View My Work</a>
+            <a class="btn btn-outline" href="#contact">Get In Touch</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About -->
-    <section class="about" id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I'm Muhammad Idrees, a <strong>Lecturer of Mathematics at Government Boys
-          Postgraduate College Quetta</strong>, and alongside that I'm building a career as a
-          <strong>software developer</strong>. Teaching has sharpened the way I think — breaking
-          complex problems into clear, logical steps and explaining them simply — and I bring
-          that same mindset to writing code.
-        </p>
-        <p>
-          My journey into tech grew out of a love for problem-solving and a curiosity about how
-          software actually works under the hood. I've been learning web development and, more
-          recently, <strong>agentic AI</strong>, enjoying the process of turning ideas into fast,
-          functional web apps. I work across the stack, from crafting clean UIs to building the
-          logic that powers them.
-        </p>
-        <p>
-          Balancing a teaching career with hands-on development keeps me grounded in both the
-          theoretical and practical sides of problem-solving. Whether I'm explaining a
-          mathematical proof to a classroom or debugging a tricky piece of code, I approach it
-          with the same patience, curiosity, and attention to detail — and I'm excited about
-          where combining education, mathematics, and AI-driven development can take me next.
-        </p>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <span class="skill">HTML</span>
-          <span class="skill">CSS</span>
-          <span class="skill">JavaScript</span>
-          <span class="skill">TypeScript</span>
-          <span class="skill">Python</span>
-          <span class="skill">React</span>
-          <span class="skill">Next.js</span>
-          <span class="skill">Tailwind CSS</span>
-          <span class="skill">Node.js</span>
-          <span class="skill">Git &amp; GitHub</span>
-          <span class="skill">REST APIs</span>
-          <span class="skill">LaTeX</span>
-          <span class="skill">Agentic AI</span>
+      <!-- About -->
+      <section class="about" id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>
+            I'm Muhammad Idrees, a
+            <strong
+              >Lecturer of Mathematics at Government Boys Postgraduate College
+              Quetta</strong
+            >, and alongside that I'm building a career as a
+            <strong>software developer</strong>. Teaching has sharpened the way
+            I think — breaking complex problems into clear, logical steps and
+            explaining them simply — and I bring that same mindset to writing
+            code.
+          </p>
+          <p>
+            My journey into tech grew out of a love for problem-solving and a
+            curiosity about how software actually works under the hood. I've
+            been learning web development and, more recently,
+            <strong>agentic AI</strong>, enjoying the process of turning ideas
+            into fast, functional web apps. I work across the stack, from
+            crafting clean UIs to building the logic that powers them.
+          </p>
+          <p>
+            Balancing a teaching career with hands-on development keeps me
+            grounded in both the theoretical and practical sides of
+            problem-solving. Whether I'm explaining a mathematical proof to a
+            classroom or debugging a tricky piece of code, I approach it with
+            the same patience, curiosity, and attention to detail — and I'm
+            excited about where combining education, mathematics, and AI-driven
+            development can take me next.
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <div class="card">
-            <h3>Snake Game</h3>
-            <p>The classic snake game rebuilt for the browser — smooth controls, score tracking, and responsive gameplay.</p>
-            <a class="link" href="https://snake-game-idreesmath.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-          </div>
-          <div class="card">
-            <h3>Expense Tracker Pro</h3>
-            <p>A clean expense tracking app to record spending, categorise transactions, and stay on top of your budget.</p>
-            <a class="link" href="https://expense-tracker-pro-idreesmath.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-          </div>
-          <div class="card">
-            <h3>Weather Dashboard</h3>
-            <p>A weather dashboard showing current conditions and forecasts with a clear, glanceable interface.</p>
-            <span class="coming-soon">Coming soon</span>
-          </div>
-          <div class="card">
-            <h3>Markdown Notes App</h3>
-            <p>A lightweight note-taking app with live Markdown preview for quickly capturing and organising ideas.</p>
-            <span class="coming-soon">Coming soon</span>
-          </div>
-          <div class="card">
-            <h3>AI Chatbot Assistant</h3>
-            <p>A conversational AI assistant exploring agentic patterns — natural chat with helpful, task-oriented responses.</p>
-            <span class="coming-soon">Coming soon</span>
-          </div>
-          <div class="card">
-            <h3>Recipe Finder</h3>
-            <p>Search and discover recipes by ingredient or cuisine, with a simple interface built for home cooks.</p>
-            <span class="coming-soon">Coming soon</span>
+      <!-- Skills -->
+      <section id="skills">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">TypeScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">React</span>
+            <span class="skill">Next.js</span>
+            <span class="skill">Tailwind CSS</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Git &amp; GitHub</span>
+            <span class="skill">REST APIs</span>
+            <span class="skill">LaTeX</span>
+            <span class="skill">Agentic AI</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-          <div class="contact-item">
-            <span class="icon">📧</span>
-            <div class="label">Email</div>
-            <a href="mailto:idrees@idrees.pk">idrees@idrees.pk</a>
-          </div>
-          <div class="contact-item">
-            <span class="icon">📱</span>
-            <div class="label">Phone</div>
-            <a href="tel:+923218040866">+92-321-8040866</a>
-          </div>
-          <div class="contact-item">
-            <span class="icon">📍</span>
-            <div class="label">Location</div>
-            <span>Pakistan</span>
+      <!-- Projects -->
+      <section id="projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <div class="card">
+              <h3>Snake Game</h3>
+              <p>
+                The classic snake game rebuilt for the browser — smooth
+                controls, score tracking, and responsive gameplay.
+              </p>
+              <a
+                class="link"
+                href="https://snake-game-idreesmath.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live Demo →</a
+              >
+            </div>
+            <div class="card">
+              <h3>Expense Tracker Pro</h3>
+              <p>
+                A clean expense tracking app to record spending, categorise
+                transactions, and stay on top of your budget.
+              </p>
+              <a
+                class="link"
+                href="https://expense-tracker-pro-idreesmath.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live Demo →</a
+              >
+            </div>
+            <div class="card">
+              <h3>Weather Dashboard</h3>
+              <p>
+                A weather dashboard showing current conditions and forecasts
+                with a clear, glanceable interface.
+              </p>
+              <span class="coming-soon">Coming soon</span>
+            </div>
+            <div class="card">
+              <h3>Markdown Notes App</h3>
+              <p>
+                A lightweight note-taking app with live Markdown preview for
+                quickly capturing and organising ideas.
+              </p>
+              <span class="coming-soon">Coming soon</span>
+            </div>
+            <div class="card">
+              <h3>AI Chatbot Assistant</h3>
+              <p>
+                A conversational AI assistant exploring agentic patterns —
+                natural chat with helpful, task-oriented responses.
+              </p>
+              <span class="coming-soon">Coming soon</span>
+            </div>
+            <div class="card">
+              <h3>Recipe Finder</h3>
+              <p>
+                Search and discover recipes by ingredient or cuisine, with a
+                simple interface built for home cooks.
+              </p>
+              <span class="coming-soon">Coming soon</span>
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <span class="icon">📧</span>
+              <div class="label">Email</div>
+              <a href="mailto:idrees@idrees.pk">idrees@idrees.pk</a>
+            </div>
+            <div class="contact-item">
+              <span class="icon">📱</span>
+              <div class="label">Phone</div>
+              <a href="tel:+923218040866">+92-321-8040866</a>
+            </div>
+            <div class="contact-item">
+              <span class="icon">📍</span>
+              <div class="label">Location</div>
+              <span>Quetta Pakistan</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        &copy; 2026 Muhammad Idrees. Built with plain HTML &amp; CSS.
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      &copy; 2026 Muhammad Idrees. Built with plain HTML &amp; CSS.
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
