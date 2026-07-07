@@ -1,8 +1,14 @@
+### Name: Muhammad Idrees
+### Panaversity ID: @idrees448-77qh
+#### Task: 03 (My Portfolio) Course: AI101 - P011
+
 # My Portfolio 🌐
 
 A clean, mobile-friendly, one-page portfolio website built with plain **HTML & CSS** — no frameworks, no build step, no dependencies.
 
-**🔗 Live site:** [idrees.pk](https://idrees.pk/) · [my-portfolio-idrees.vercel.app](https://my-portfolio-idrees.vercel.app/)
+**🔗 Live site:** [idrees.pk](https://idrees.pk/)  
+
+**🔗 Live site on Vercel:** [my-portfolio-idrees.vercel.app](https://my-portfolio-idrees.vercel.app/)
 
 ## About
 
