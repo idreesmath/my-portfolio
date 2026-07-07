@@ -37,4 +37,4 @@ Balancing a teaching career with hands-on development keeps me grounded in both 
 
 - idrees@idrees.pk
 - +92-321-8040866
-- Pakistan
+- Quetta, Pakistan
