@@ -2,7 +2,7 @@
 
 A clean, mobile-friendly, one-page portfolio website built with plain **HTML & CSS** — no frameworks, no build step, no dependencies.
 
-**🔗 Live site:** [idrees.pk](https://idrees.pk/)
+**🔗 Live site:** [idrees.pk](https://idrees.pk/) · [my-portfolio-idrees.vercel.app](https://my-portfolio-idrees.vercel.app/)
 
 ## About
 
@@ -14,7 +14,7 @@ Personal portfolio of **Muhammad Idrees** — Lecturer of Mathematics at Governm
 - 🎨 **Professional dark theme** — navy background with sky-blue accents, defined via CSS custom properties for easy re-theming
 - ⚡ **Zero dependencies** — everything (markup + styles) lives in one `index.html` file; works offline and loads instantly
 - 🧭 **Smooth navigation** — sticky header with smooth-scroll links to each section
-- ✉️ **Actionable contact cards** — clickable `mailto:` and `tel:` links
+- ✉️ **Actionable contact cards** — clickable `mailto:` link
 
 ## Sections
 
@@ -22,7 +22,7 @@ Personal portfolio of **Muhammad Idrees** — Lecturer of Mathematics at Governm
 2. **About Me** — background in teaching, mathematics, and software development
 3. **Skills** — HTML, CSS, JavaScript, TypeScript, Python, React, Next.js, Tailwind CSS, Node.js, Git & GitHub, REST APIs, LaTeX, Agentic AI
 4. **Projects** — Snake Game, Expense Tracker Pro, Weather Dashboard, Markdown Notes App, AI Chatbot Assistant, Recipe Finder
-5. **Contact** — email, phone, and location
+5. **Contact** — email and location
 
 ## Project Structure
 
@@ -64,7 +64,6 @@ npx vercel --prod
 ## Contact
 
 - 📧 [idrees@idrees.pk](mailto:idrees@idrees.pk)
-- 📱 +92-321-8040866
 - 📍 Pakistan
 
 ---
